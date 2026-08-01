@@ -44,7 +44,11 @@ for (const file of [
   "fastlane/metadata/android/en-US/short_description.txt",
   "fastlane/metadata/android/en-US/full_description.txt",
   "fastlane/metadata/android/en-US/images/icon.png",
-  "fastlane/metadata/android/en-US/images/phoneScreenshots/trainer.png",
+  "fastlane/metadata/android/en-US/images/phoneScreenshots/01-blue-trainer.png",
+  "fastlane/metadata/android/en-US/images/tenInchScreenshots/01-trainer.png",
+  "fastlane/metadata/android/en-US/images/tenInchScreenshots/02-single-note-follow-on.png",
+  "fastlane/metadata/android/en-US/images/tenInchScreenshots/03-music-trainer.png",
+  "fastlane/metadata/android/en-US/images/tenInchScreenshots/04-statistics.png",
 ]) {
   assert(fs.statSync(file).size > 0, `${file} is missing or empty`);
 }
