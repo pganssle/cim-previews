@@ -6,6 +6,8 @@ WebSite: https://cim.ganbar.us/
 SourceCode: https://github.com/pganssle/cim
 IssueTracker: https://github.com/pganssle/cim/issues
 Changelog: https://github.com/pganssle/cim/releases
+Binaries: https://github.com/pganssle/cim/releases/download/v%v/cim-v%v.apk
+AllowedAPKSigningKeys: 815ea4ee3f146cb1f2bf03e0b9a99caedf8813549421f97b713074ee8194c9d1
 
 AutoName: Chord Identification Method Trainer
 

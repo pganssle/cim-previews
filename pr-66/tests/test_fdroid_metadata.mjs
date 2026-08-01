@@ -26,6 +26,11 @@ assert.equal(
 );
 assert.equal(metadataValue("CurrentVersion"), version.versionName);
 assert.equal(Number(metadataValue("CurrentVersionCode")), version.versionCode);
+assert.equal(
+  metadataValue("Binaries"),
+  "https://github.com/pganssle/cim/releases/download/v%v/cim-v%v.apk",
+);
+assert.match(metadataValue("AllowedAPKSigningKeys"), /^[0-9a-f]{64}$/);
 
 const build = metadata.match(
   /^  - versionName: (.+)\n    versionCode: (\d+)\n    commit: (.+)$/m,
