@@ -1981,11 +1981,6 @@ function validate_import(imported) {
     return imported;
 }
 
-function backup_timestamp_from_name(filename) {
-    const match = filename.match(/cim_state_(\d+)/);
-    return match === null ? 0 : Number(match[1]);
-}
-
 function latest_backup_data_timestamp(imported) {
     let latest = 0;
     for (const profile of Object.values(imported.state.profiles)) {
@@ -2023,9 +2018,7 @@ async function import_state_file(file_input) {
 
     if (!Number.isFinite(Number(_PENDING_IMPORT.exported_at)) ||
         Number(_PENDING_IMPORT.exported_at) <= 0) {
-        _PENDING_IMPORT.exported_at = Math.max(
-            backup_timestamp_from_name(file.name),
-            latest_backup_data_timestamp(_PENDING_IMPORT));
+        _PENDING_IMPORT.exported_at = latest_backup_data_timestamp(_PENDING_IMPORT);
     }
 
     document.getElementById("import-file-description").textContent =
