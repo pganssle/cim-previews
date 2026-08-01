@@ -34,6 +34,7 @@ Builds:
       - bundle config set --local path vendor/bundle
       - bundle install
       - make android-assets
+      - echo "sdk.dir=$$SDK$$" > android/local.properties
     scanignore:
       - node_modules/@capacitor/cli/assets/android-template.tar.gz
       - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
