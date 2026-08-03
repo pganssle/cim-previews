@@ -1,0 +1,6 @@
+- Fixed the stats history popup, which was too wide and required horizontal scrolling.
+- Single note stats now appear in the stats history popup when single note mode is active.
+- Added option to persist the cat reaction face between sessions.
+- Fixed incorrect display of Bb and Eb note shapes.
+- Added single note trainer: after identifying a chord, you can now practice identifying the individual notes.
+- Added per-session single note statistics.
